@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>mimi_cards</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./index.css"> -->
+    <!-- <script src="./src/js/html2canvas.js"></script> -->
+    <script src="./src/js/html2canvas.js"></script>
+    <style>
+        body {
+    padding: 0;
+    margin: 0;
+    background-color: #C1EEE3;
+    }
+
+    /*保存按钮*/
+    .control {
+    width: 20%;
+    margin: 10px auto 10px;
+    background-color: #84F97F;
+    }
+
+    /*预览和结果样式*/
+    .page,
+    .res {
+    width: 842px;
+    margin: 0 auto 0;
+    background-color: #9D9D9D;
+    position: relative;
+    }
+
+    .page .card {
+    padding: 0;
+    margin: 0 0 5%;
+    width: 842px;
+    height: 45%;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+
+    }
+
+    .page .card .main_content {
+    padding: 20px 0 0;
+    font-family: SimHei;
+    font-size: 200px;
+    color: #FF0000;
+    text-align: center;
+    display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page" id="page">
+        <div class="card">
+            <span class="main_content">妈妈</span>
+        </div>
+        <div class="card">
+            <span class="main_content">爸爸</span>
+        </div>
+    </div>
+
+    <div class="control">
+        PDF名字：
+        <input type="input"></input>
+        <button id="save_btn">保存</button>
+    </div>
+
+    <div id="res" class="res">
+
+    </div>
+
+    <script>
+    const savebtn = document.getElementById('save_btn')
+    let page = document.getElementById('page')
+    let image = document.createElement("img");
+
+    savebtn.addEventListener('click', e => {
+
+        document.getElementById('res').innerHTML = ""
+        html2canvas(page, {
+            backgroundColor: null,
+            scale: 1,
+            useCORS: true,
+        }).then(canvas => {
+            let imgURI = canvas.toDataURL('image/jpeg', 1)
+            image.src = imgURI;
+            document.getElementById('res').appendChild(image);
+        })
+    })
+    </script>
+</body>
+
+</html>

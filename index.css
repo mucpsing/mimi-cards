@@ -1,0 +1,83 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #C1EEE3;
+}
+
+/*保存按钮*/
+.control {
+    width: 20%;
+    margin: 10px auto 10px;
+    background-color: #84F97F;
+}
+
+/*预览和结果样式*/
+
+#page {
+    margin: 0 auto 0;
+    background-color: #E85353;
+    text-align: center;
+    line-height: 20px;
+}
+
+#page div {
+    background-color: #CDC3C3;
+    margin: auto;
+}
+
+#res {
+    margin: 0 auto 0;
+}
+
+
+#paper {
+    background-color: #367AD0;
+    color: red;
+    margin: 0 auto 0;
+
+}
+
+.test {
+    width: 842px;
+    height: 595.5px;
+}
+
+.a4-72 {
+    width: 842px;
+    height: 595px;
+    background-color: #B8BEC6;
+}
+
+.a4-150 {
+    width: 1754px;
+    height: 1240px;
+}
+
+.a4-300 {
+    width: 3508px;
+    height: 2479px;
+}
+
+.a3-72 {
+    width: 1191px;
+    height: 842px;
+}
+
+.a3-150 {
+    width: 1754px;
+    height: 1240px;
+}
+
+.a3-300 {
+    width: 4961px;
+    height: 3508px;
+}
+
+/*#box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    left: 10px;
+    background: red;
+}*/
